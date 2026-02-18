@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gulcemis Technologies — GRAVIA</title>
+  <meta name="description" content="Gulcemis Technologies develops stability-driven physical energy systems for distributed environments. GRAVIA: gravity-assisted fluid architecture with embodied Physical AI control." />
+  <style>
+    :root{
+      --bg:#0B1220;
+      --panel:#0F1B2D;
+      --card:#0D1728;
+      --text:#E8EEF8;
+      --muted:#A9B7D0;
+      --brand:#8B7CFF;
+      --line:rgba(255,255,255,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(139,124,255,.20), transparent 60%),
+        radial-gradient(900px 500px at 90% 20%, rgba(88,201,255,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg), #070B14 70%);
+      color:var(--text);
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 70px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;padding:12px 2px 20px;
+    }
+    .logo{
+      display:flex;align-items:center;gap:10px;font-weight:650;letter-spacing:.2px
+    }
+    .mark{
+      width:34px;height:34px;border-radius:10px;
+      background:linear-gradient(135deg, rgba(139,124,255,.9), rgba(88,201,255,.75));
+      box-shadow:0 10px 30px rgba(139,124,255,.18);
+    }
+    .toplinks{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;border-radius:12px;border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      text-decoration:none;font-weight:600;
+    }
+    .btn.primary{
+      border:1px solid rgba(139,124,255,.45);
+      background:rgba(139,124,255,.12);
+    }
+
+    .hero{
+      display:grid;grid-template-columns: 1.2fr .8fr;
+      gap:18px;align-items:stretch;
+      margin-top:8px;
+    }
+    .card{
+      border:1px solid var(--line);
+      background:rgba(13,23,40,.72);
+      backdrop-filter: blur(10px);
+      border-radius:20px;
+      padding:22px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.30);
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.05;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+      margin:0 0 16px;
+      max-width:62ch;
+    }
+    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      padding:8px 10px;border-radius:999px;
+      font-size:13px;
+    }
+
+    .side{
+      background:
+        linear-gradient(180deg, rgba(15,27,45,.86), rgba(15,27,45,.62)),
+        radial-gradient(700px 350px at 30% 10%, rgba(139,124,255,.22), transparent 60%),
+        radial-gradient(600px 350px at 80% 50%, rgba(88,201,255,.12), transparent 55%);
+      position:relative;
+      overflow:hidden;
+    }
+    .gridlines{
+      position:absolute;inset:-40px;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity:.35;
+      transform: rotate(7deg);
+    }
+    .sidecontent{
+      position:relative;
+      height:100%;
+      display:flex;flex-direction:column;justify-content:space-between;
+      gap:18px;
+    }
+    .label{
+      display:inline-flex;gap:8px;align-items:center;
+      color:var(--muted);
+      font-weight:650;
+      letter-spacing:.18px;
+    }
+    .label b{color:var(--text)}
+    .big{
+      font-size:22px;font-weight:750;letter-spacing:-.2px;margin:0;
+    }
+    .small{
+      color:var(--muted);margin:8px 0 0;line-height:1.6
+    }
+
+    .section{margin-top:18px}
+    .section h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .grid3{
+      display:grid;grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    .item{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+      border-radius:16px;
+      padding:14px;
+      color:var(--muted);
+      line-height:1.55;
+      min-height:92px;
+    }
+    .item b{color:var(--text)}
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+      font-size:13px;
+    }
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <div>Gulcemis Technologies</div>
+          <div style="color:var(--muted);font-size:12.5px;margin-top:2px;">Deep-tech | Stability-driven physical systems</div>
+        </div>
+      </div>
+
+      <div class="toplinks">
+        <a class="btn" href="#gravia">GRAVIA</a>
+        <a class="btn" href="#focus">Focus</a>
+        <a class="btn primary" href="mailto:info@gulcemistech.eu">Contact</a>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="card">
+        <h1>Stability-Driven Physical<br/>Energy Systems</h1>
+        <p class="sub">
+          Gulcemis Technologies develops stability-driven physical and energy systems for distributed environments.
+          Our core project, <b>GRAVIA</b>, investigates gravity-assisted fluid architectures with an embodied
+          Physical AI control layer designed to operate under intermittent multi-source inputs.
+        </p>
+
+        <div class="pillrow">
+          <span class="pill">Gravity-assisted fluid loops</span>
+          <span class="pill">Intermittent multi-source inputs</span>
+          <span class="pill">Embodied Physical AI control</span>
+          <span class="pill">Stability maps & validation</span>
+        </div>
+
+        <div class="section" id="gravia" style="margin-top:18px;">
+          <h2>GRAVIA Project</h2>
+          <div class="item">
+            <b>GRAVIA</b> is a gravity-assisted fluid energy system designed to maintain continuous operation under
+            fluctuating, low-grade, and irregular physical inputs.
+            Phase-1 targets progression from <b>TRL 4</b> to <b>TRL 6</b> through structured laboratory validation under controlled intermittent input scenarios.
+          </div>
+        </div>
+
+        <div class="section" id="focus">
+          <h2>Technology Focus</h2>
+          <div class="grid3">
+            <div class="item"><b>Architecture</b><br/>Gravity-assisted circulation, pressure & flow state dynamics.</div>
+            <div class="item"><b>Control</b><br/>Embodied control logic using real-time pressure/level/flow variables.</div>
+            <div class="item"><b>Validation</b><br/>Stability regimes, repeatable test protocols, loss mapping.</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Founder</h2>
+          <div class="item">
+            <b>Ismail Koksal</b><br/>
+            Founder, Gulcemis Technologies — Initiator of the GRAVIA system concept.
+          </div>
+        </div>
+      </div>
+
+      <div class="card side" aria-label="GRAVIA visual panel">
+        <div class="gridlines" aria-hidden="true"></div>
+        <div class="sidecontent">
+          <div>
+            <div class="label"><span style="width:8px;height:8px;border-radius:99px;background:var(--brand);display:inline-block"></span> <b>GRAVIA</b> System Concept</div>
+            <p class="small">
+              A stability-oriented physical architecture designed to coordinate multiple intermittent inputs and remain within defined operating envelopes.
+            </p>
+          </div>
+
+          <div>
+            <p class="big">Continuity under intermittent inputs</p>
+            <p class="small">
+              Focus: system stability and operational continuity rather than single-source efficiency optimisation.
+            </p>
+          </div>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="mailto:info@gulcemistech.eu">Email</a>
+            <a class="btn" href="#gravia">Read project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>© <span id="y"></span> Gulcemis Technologies</div>
+      <div>Email: <a href="mailto:info@gulcemistech.eu">info@gulcemistech.eu</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
